@@ -1,0 +1,99 @@
+{
+  "name": "cagc-console",
+  "author": "LCTR",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lc3586/CAGC-Console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lc3586/CAGC-Console/issues"
+  },
+  "homepage": "https://cagc-console.lctr.top",
+  "private": false,
+  "keywords": [
+    "cagc",
+    "generate code",
+    "java",
+    "velocity",
+    "org.apache.velocity"
+  ],
+  "scripts": {
+    "install:all": "yarn install && cd vue2 && yarn install && cd ../",
+    "postinstall": "node ./scripts/postinstall.js",
+    "switch:vue2": "node bin/vue-switch.js 2 && vue-demi-switch 2",
+    "switch:vue3": "node bin/vue-switch.js 3 && vue-demi-switch 3",
+    "typecheck": "vue-tsc --noEmit",
+    "dts": "vue-tsc --declaration --emitDeclarationOnly",
+    "dev:vue2": "cd vue2 && vite && cd ../",
+    "dev:vue3": "vite",
+    "build:vue2": "yarn run switch:vue2 && cd vue2 && vite build --config ./build/build.vue2.config.js && cd ../",
+    "build:vue3": "yarn run switch:vue3 && vite build --config ./build/build.vue3.config.ts",
+    "preview:vue2": "yarn run switch:vue2 && cd vue2 && vite preview && cd ../",
+    "preview:vue3": "yarn run switch:vue3 && vite preview"
+  },
+  "dependencies": {
+    "@iconify-json/ep": "^1.1.10",
+    "@types/axios": "^0.14.0",
+    "@types/md5": "^2.3.2",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/integrations": "^9.13.0",
+    "dayjs": "^1.11.7",
+    "element-plus": "^2.1.0",
+    "monaco-editor": "^0.36.1",
+    "vue": "^3.2.45",
+    "vue-demi": "^0.13.11",
+    "vue-i18n": "^9.2.2",
+    "vue-layout-page": "^1.0.2",
+    "vue-router": "^4.1.6",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.9.0",
+    "@types/node": "^18.14.6",
+    "@types/nprogress": "^0.2.0",
+    "@types/qrcode": "^1.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "@vitejs/plugin-legacy": "^4.0.1",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/composition-api": "^1.7.1",
+    "@vue/eslint-config-prettier": "^7.1.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "prettier": "^2.8.4",
+    "rollup-plugin-dts": "^5.0.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.3",
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-icons": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.1.0",
+    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-dts": "^1.7.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-inspect": "^0.7.15",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vite-svg-loader": "^4.0.0",
+    "vue-tsc": "^1.0.24"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^1.7.1",
+    "vue": "^2.0.0 || >=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    },
+    "@vue/composition-api": {
+      "optional": true
+    }
+  }
+}

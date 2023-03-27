@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "allowJs": true,
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM"],
+    "outDir": "./",
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "@intlify/unplugin-vue-i18n/messages",
+      "element-plus/global",
+      "unplugin-icons/types/vue"
+    ],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vite.config.ts", "src/api/service/common/WeChatOAuthServ"],
+  "exclude": ["*.json"]
+}
