@@ -45,7 +45,7 @@ const scrollBehavior = function (
       return false;
     }
 
-    return new Promise((resolve) => {
+    return new Promise<Record<string, any>>((resolve) => {
       // check if any matched route config has meta that requires scrolling to top
       if (to.matched.some((m) => m.meta.scrollToTop)) {
         // coords will be used if no selector is provided,
